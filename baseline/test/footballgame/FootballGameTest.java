@@ -13,16 +13,15 @@ import static org.mockito.Mockito.verify;
 public class FootballGameTest {
 
     private FootballGame footballGame;
-    private Reporter reporter;
-    private Fans fans;
+    private Spectator reporter;
+    private Spectator fans;
 
     @Before
     public void Setup() throws Exception {
         footballGame = new FootballGame();
         reporter = mock(Reporter.class);
         fans = mock(Fans.class);
-        footballGame.add(reporter);
-        footballGame.add(fans);
+        footballGame.add(reporter, fans);
     }
 
     @Test

@@ -3,7 +3,7 @@ package footballgame;
 /**
  * Created by twer on 07/03/15.
  */
-public class Fans {
+public class Fans implements Spectator {
     private String team;
 
     public Fans(String team) {
@@ -11,6 +11,7 @@ public class Fans {
         this.team = team;
     }
 
+    @Override
     public String reactToGoal(String scoringTeam) {
         return this.team.equals(scoringTeam) ? "YAY" : "BOO";
     }
